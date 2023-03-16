@@ -20,6 +20,13 @@ class SpicesController < ApplicationController
         render json: spice, status: :accepted
     end
 
+    # DELETE /spices/:id
+    def destroy
+        spice = find_spice
+        spice.destroy
+        head :no_content
+    end
+
     private
     # Strong Params
     def spice_params
