@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #   POST /spices: create a new spice
   #   PATCH /spices/:id: update an existing spice
   #   DELETE /spices/:id: delete an existing spice
-
-  resources :spices, only: [:index, :create]
+  # Instead of using resource method, will use custom routes as we don't need all the RESTful routes
+  get "/spices", to: "spices#index"
+  post "/spices", to: "spices#create"
 end
