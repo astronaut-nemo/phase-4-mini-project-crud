@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   # Instead of using resource method, will use custom routes as we don't need all the RESTful routes
   get "/spices", to: "spices#index"
   post "/spices", to: "spices#create"
+  patch "/spices/:id", to: "spices#update"
 end
