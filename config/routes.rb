@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   #   PATCH /spices/:id: update an existing spice
   #   DELETE /spices/:id: delete an existing spice
 
-  resources :spices, only: [:index]
+  resources :spices, only: [:index, :create]
 end
